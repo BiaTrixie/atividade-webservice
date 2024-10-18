@@ -14,9 +14,10 @@ import java.util.List;
 public class ProdutoResource implements IResource<ProdutoDto, Integer> {
 
     /**
-     * Esse metodo é
-     * @param entity
-     * @return
+     * Esse método cria um novo produto.
+     *
+     * @param entity Objeto ProdutoDto contendo os dados do produto a ser criado.
+     * @return Retorna o ProdutoDto criado.
      */
     @Override
     @PostMapping(
@@ -27,6 +28,12 @@ public class ProdutoResource implements IResource<ProdutoDto, Integer> {
         return null;
     }
 
+    /**
+     * Esse método retorna os detalhes de um produto específico com base no ID fornecido.
+     *
+     * @param id ID do produto a ser retornado.
+     * @return Retorna o ProdutoDto correspondente ao ID fornecido.
+     */
     @Override
     @GetMapping(
             value="/{id}",
@@ -36,6 +43,11 @@ public class ProdutoResource implements IResource<ProdutoDto, Integer> {
         return null;
     }
 
+    /**
+     * Esse método retorna a lista de todos os produtos.
+     *
+     * @return Retorna uma lista de ProdutoDto contendo todos os produtos.
+     */
     @Override
     @GetMapping(
             produces = {MediaType.APPLICATION_JSON_VALUE}
@@ -44,16 +56,28 @@ public class ProdutoResource implements IResource<ProdutoDto, Integer> {
         return List.of();
     }
 
+    /**
+     * Esse método atualiza os dados de um produto existente com base no ID fornecido.
+     *
+     * @param id ID do produto a ser atualizado.
+     * @param entity Objeto ProdutoDto contendo os novos dados do produto.
+     * @return Retorna o ProdutoDto atualizado.
+     */
     @Override
     @PutMapping(
             value="/{id}",
             produces = {MediaType.APPLICATION_JSON_VALUE},
             consumes = {MediaType.APPLICATION_JSON_VALUE}
     )
-    public ProdutoDto update(@PathVariable Integer id,@RequestBody ProdutoDto entity) {
+    public ProdutoDto update(@PathVariable Integer id, @RequestBody ProdutoDto entity) {
         return null;
     }
 
+    /**
+     * Esse método exclui um produto específico com base no ID fornecido.
+     *
+     * @param id ID do produto a ser excluído.
+     */
     @Override
     @DeleteMapping(
             value="/{id}"

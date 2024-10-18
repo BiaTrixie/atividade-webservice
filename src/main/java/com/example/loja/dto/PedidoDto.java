@@ -1,15 +1,23 @@
 package com.example.loja.dto;
 
 import lombok.Data;
-
 import java.util.Date;
 
 @Data
 public class PedidoDto {
+
+    /**
+     * ID único do pedido.
+     */
     private Integer id;
 
-    private Long NroPedido;
+    /**
+     * Número identificador do pedido.
+     */
+    private Long nroPedido;
 
-    private Date DatPedido;
-
+    /**
+     * Data em que o pedido foi realizado.
+     */
+    private Date datPedido;
 }

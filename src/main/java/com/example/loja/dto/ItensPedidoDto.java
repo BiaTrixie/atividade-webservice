@@ -1,9 +1,19 @@
 package com.example.loja.dto;
 
 public class ItensPedidoDto {
+
+    /**
+     * ID único do item do pedido.
+     */
     private Integer id;
 
-    private Double QtdeItem;
+    /**
+     * Quantidade do item no pedido.
+     */
+    private Double qtdeItem;
 
-    private Double ValUnidade;
+    /**
+     * Valor unitário do item no pedido.
+     */
+    private Double valUnidade;
 }

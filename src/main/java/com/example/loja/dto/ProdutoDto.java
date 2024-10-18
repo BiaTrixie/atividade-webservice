@@ -1,11 +1,24 @@
 package com.example.loja.dto;
 
 public class ProdutoDto {
+
+    /**
+     * ID único do produto.
+     */
     private Integer id;
 
-    private String DesPro;
+    /**
+     * Descrição do produto.
+     */
+    private String desPro;
 
-    private Double QtdeProduto;
+    /**
+     * Quantidade de produto.
+     */
+    private Double qtdeProduto;
 
-    private Double ValProduto;
+    /**
+     * Valor unitário do produto.
+     */
+    private Double valProduto;
 }

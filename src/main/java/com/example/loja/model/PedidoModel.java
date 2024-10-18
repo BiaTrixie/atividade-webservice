@@ -5,17 +5,27 @@ import lombok.Data;
 
 import java.util.Date;
 
-
 @Entity
 @Table(name = "pedido")
 public class PedidoModel {
+
+    /**
+     * ID único do pedido, gerado automaticamente pelo banco de dados.
+     */
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
     private Integer id;
 
-    @Column( name = "NROPEDIDO")
-    private Long NroPedido;
+    /**
+     * Número do pedido.
+     */
+    @Column(name = "NROPEDIDO")
+    private Long nroPedido;
 
-    @Column( name = "DATAPEDIDO")
-    private Date DatPedido;
+    /**
+     * Data em que o pedido foi realizado.
+     */
+    @Column(name = "DATAPEDIDO")
+    private Date datPedido;
+
 }
